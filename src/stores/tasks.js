@@ -62,6 +62,9 @@ export const useTasksStore = defineStore("tasks", () => {
   }
 
   async function updateTask(id, { title, imgAttachmentKey } = {}) {
+    console.log("title:", title);
+    console.log("typeof title:", typeof title);
+
     if (title !== undefined && !title.trim()) return;
     error.value = null;
     const payload = {};
